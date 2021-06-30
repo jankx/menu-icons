@@ -338,5 +338,5 @@ final class Icon_Picker {
 	}
 }
 if ( function_exists( 'add_action' ) ) {
-	add_action( 'plugins_loaded', array( 'Icon_Picker', 'instance' ), 7 );
+	add_action( 'after_setup_theme', array( 'Icon_Picker', 'instance' ), 7 );
 }

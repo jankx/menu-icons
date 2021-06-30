@@ -13,7 +13,7 @@ define( 'THEMEISLE_GUTENBERG_MENU_ICONS_DEV', false );
 
 if ( function_exists( 'add_action' ) ) {
 	add_action(
-		'plugins_loaded',
+		'after_setup_theme',
 		function () {
 			// call this only if Gutenberg is active.
 			if ( function_exists( 'register_block_type' ) ) {
