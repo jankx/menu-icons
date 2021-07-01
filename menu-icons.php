@@ -21,6 +21,9 @@
  * Requires License:    no
  */
 
+if(!defined('JANKX_MENU_ICONS_ROOT')) {
+	define('JANKX_MENU_ICONS_ROOT', dirname(__FILE__));
+}
 
 /**
  * Main plugin class
@@ -75,9 +78,17 @@ final class Menu_Icons {
 	public static function _load() {
 		load_plugin_textdomain( 'menu-icons', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
+		$abspath = constant('ABSPATH');
+		$menu_icons_root = constant('JANKX_MENU_ICONS_ROOT');
+
+		if (PHP_OS === 'WINNT') {
+			$abspath = str_replace('\\', '/', $abspath);
+			$menu_icons_root = str_replace('\\', '/', $menu_icons_root);
+		}
+
 		self::$data = array(
-			'dir'   => plugin_dir_path( __FILE__ ),
-			'url'   => plugin_dir_url( __FILE__ ),
+			'dir'   => $menu_icons_root . '/',
+			'url'   => untrailingslashit( str_replace($abspath, site_url('/'), $menu_icons_root) ),
 			'types' => array(),
 		);
 

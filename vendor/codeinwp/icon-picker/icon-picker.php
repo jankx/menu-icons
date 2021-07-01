@@ -154,9 +154,17 @@ final class Icon_Picker {
 	 * @return Icon_Picker
 	 */
 	protected function __construct( $args = array() ) {
+		$abspath = constant('ABSPATH');
+		$icon_picker_dir = dirname(__FILE__);
+
+		if (PHP_OS === 'WINNT') {
+			$abspath = str_replace('\\', '/', $abspath);
+			$icon_picker_dir = str_replace('\\', '/', $icon_picker_dir);
+		}
+
 		$defaults = array(
-			'dir' => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-			'url' => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+			'dir' => $icon_picker_dir . '/',
+			'url' => str_replace($abspath, site_url('/'), $icon_picker_dir),
 		);
 
 		$args = wp_parse_args( $args, $defaults );
