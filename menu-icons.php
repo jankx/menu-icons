@@ -21,10 +21,6 @@
  * Requires License:    no
  */
 
-if(!defined('JANKX_MENU_ICONS_ROOT')) {
-	define('JANKX_MENU_ICONS_ROOT', dirname(__FILE__));
-}
-
 /**
  * Main plugin class
  */
@@ -165,7 +161,7 @@ final class Menu_Icons {
 		<?php
 	}
 }
-add_action( 'after_setup_theme', array( 'Menu_Icons', '_load' ) );
+add_action( 'after_setup_theme', array( 'Menu_Icons', '_load' ), 5 );
 
 $vendor_file = dirname(__FILE__) . '/vendor/autoload.php';
 
