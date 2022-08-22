@@ -18,6 +18,7 @@
       "Jankx\\MenuIcons\\": "src/"
     },
     "files": [
+      "./vendor/codeinwp/icon-picker/includes/types/font.php",
       "./bootstrap.php"
     ]
   }
