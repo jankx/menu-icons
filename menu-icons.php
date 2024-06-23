@@ -252,7 +252,7 @@ final class Menu_Icons {
 		<?php
 	}
 }
-add_action( 'plugins_loaded', array( 'Menu_Icons', '_load' ) );
+add_action( 'after_setup_theme', array( 'Menu_Icons', '_load' ) );
 
 $vendor_file = dirname(__FILE__) . '/vendor/autoload.php';
 

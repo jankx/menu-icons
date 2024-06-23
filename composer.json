@@ -3,6 +3,7 @@
   "description": "WordPress Menu Icons",
   "type": "wordpress-plugin",
   "require": {
+    "jankx/helpers": "*",
     "jankx/icon-picker": "*",
     "jankx/menu-item-custom-fields": "*",
     "jankx/gutenberg-menu-icons": "*"
