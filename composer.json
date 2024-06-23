@@ -5,7 +5,6 @@
   "require": {
     "jankx/icon-picker": "master",
     "jankx/menu-item-custom-fields": "master",
-    "jankx/themeisle-sdk": "^3.2",
     "jankx/gutenberg-menu-icons": "^1.0"
   },
   "replace": {
