@@ -1,5 +1,5 @@
 {
-  "name": "codeinwp/wp-menu-icons",
+  "name": "jankx/menu-icons",
   "description": "WordPress Menu Icons",
   "type": "wordpress-plugin",
   "require": {
@@ -24,7 +24,6 @@
     "lint": "phpcs --standard=phpcs.xml "
   },
   "minimum-stability": "dev",
-  "prefer-stable": true,
   "config": {
     "optimize-autoloader": true,
     "platform": {
