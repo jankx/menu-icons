@@ -205,7 +205,6 @@ final class Menu_Icons {
 		}
 		if ( $show_notice ) {
 			wp_enqueue_style( 'menu-icons-dashboard' );
-			add_action( 'admin_notices', array( __CLASS__, '_upsell_admin_notice' ) );
 		}
 	}
 
@@ -223,46 +222,12 @@ final class Menu_Icons {
 			exit;
 		}
 	}
-
-	/**
-	 * Upsell admin notice.
-	 */
-	public static function _upsell_admin_notice() {
-		$neve_theme_url = add_query_arg(
-			array(
-				'theme' => 'neve',
-			),
-			admin_url( 'theme-install.php' )
-		);
-
-		$action_url = add_query_arg(
-			array(
-				'action'           => 'menu_icon_hide_notice',
-				'_wp_notice_nonce' => wp_create_nonce( self::DISMISS_NOTICE ),
-			),
-			admin_url( 'index.php' )
-		);
-		?>
-		<div class="notice notice-info menu-icon-dashboard-notice">
-			<h2><?php esc_html_e( 'Thank you for installing Menu Icons!', 'menu-icons' ); ?></h2>
-			<p><?php esc_html_e( 'Have you heard about our latest FREE theme - Neve? Using a mobile-first approach, compatibility with AMP and popular page-builders, Neve makes website building accessible for everyone.', 'menu-icons' ); ?></p>
-			<a href="<?php echo esc_url( $neve_theme_url ); ?>" class="button button-primary button-large"><?php esc_html_e( 'Preview Neve', 'menu-icons' ); ?></a>
-			<a href="<?php echo esc_url( $action_url ); ?>" class="notice-dismiss"></a>
-		</div>
-		<?php
-	}
 }
+
 add_action( 'after_setup_theme', array( 'Menu_Icons', '_load' ) );
 
 $vendor_file = dirname(__FILE__) . '/vendor/autoload.php';
 
 if ( is_readable( $vendor_file ) ) {
 	require_once $vendor_file;
-}
-
-add_filter( 'themeisle_sdk_products', 'kucrut_register_sdk', 10, 1 );
-function kucrut_register_sdk( $products ) {
-
-	$products[] = __FILE__;
-	return $products;
 }
