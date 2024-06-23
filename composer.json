@@ -3,9 +3,9 @@
   "description": "WordPress Menu Icons",
   "type": "wordpress-plugin",
   "require": {
-    "jankx/icon-picker": "master",
-    "jankx/menu-item-custom-fields": "master",
-    "jankx/gutenberg-menu-icons": "^1.0"
+    "jankx/icon-picker": "*",
+    "jankx/menu-item-custom-fields": "*",
+    "jankx/gutenberg-menu-icons": "*"
   },
   "replace": {
     "composer/installers": "*"
