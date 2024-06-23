@@ -3,10 +3,10 @@
   "description": "WordPress Menu Icons",
   "type": "wordpress-plugin",
   "require": {
-    "codeinwp/icon-picker": "master",
-    "codeinwp/menu-item-custom-fields": "master",
-    "codeinwp/themeisle-sdk": "^3.2",
-    "codeinwp/gutenberg-menu-icons": "^1.0"
+    "jankx/icon-picker": "master",
+    "jankx/menu-item-custom-fields": "master",
+    "jankx/themeisle-sdk": "^3.2",
+    "jankx/gutenberg-menu-icons": "^1.0"
   },
   "replace": {
     "composer/installers": "*"
