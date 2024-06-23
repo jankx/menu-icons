@@ -13,7 +13,7 @@
   "autoload": {
     "files": [
       "vendor/jankx/menu-item-custom-fields/menu-item-custom-fields.php",
-      "vendor/jankx/icon-picker/icon-picker.php",
+      "vendor/jankx/icon-picker/icon-picker.php"
     ]
   },
   "require-dev": {
