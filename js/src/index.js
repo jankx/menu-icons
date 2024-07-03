@@ -1,2 +1,2 @@
-require( './settings' );
-require( './picker' );
+require('./settings');
+require('./picker');

@@ -5,12 +5,12 @@
  * @augments Backbone.Model
  */
 var MenuIconsItemSettingField = Backbone.Model.extend({
-	defaults: {
-		id:    '',
-		label: '',
-		value: '',
-		type:  'text'
-	}
+    defaults: {
+        id:    '',
+        label: '',
+        value: '',
+        type:  'text'
+    }
 });
 
 module.exports = MenuIconsItemSettingField;
