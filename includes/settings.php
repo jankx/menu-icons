@@ -752,7 +752,7 @@ final class Menu_Icons_Settings
 
         if (( $menu_current_theme != 'Neve' )) {
             $upsell_notices['neve'] = array(
-                'content' => wp_sprintf('<div class="menu-icon-notice-popup-img"><img src="%s"/></div><div class="menu-icon-notice-popup"><h4>%s</h4>%s', plugin_dir_url(__FILE__) . '../images/neve-theme.jpg', __('Check-out our latest lightweight FREE theme - Neve', 'menu-icons'), __('Neve’s mobile-first approach, compatibility with AMP and popular page-builders makes website building accessible for everyone.', 'menu-icons')),
+                'content' => wp_sprintf('<div class="menu-icon-notice-popup-img"><img src="%s"/></div><div class="menu-icon-notice-popup"><h4>%s</h4>%s', jankx_get_path_url(dirname(__DIR__)) . '/images/neve-theme.jpg', __('Check-out our latest lightweight FREE theme - Neve', 'menu-icons'), __('Neve’s mobile-first approach, compatibility with AMP and popular page-builders makes website building accessible for everyone.', 'menu-icons')),
                 'url' => add_query_arg(
                     array(
                         'theme' => 'neve',

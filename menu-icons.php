@@ -80,8 +80,8 @@ final class Menu_Icons
         load_plugin_textdomain('menu-icons', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 
         self::$data = array(
-            'dir'   => plugin_dir_path(__FILE__),
-            'url'   => plugin_dir_url(__FILE__),
+            'dir'   => dirname(__FILE__) . DIRECTORY_SEPARATOR,
+            'url'   => jankx_get_path_url(__DIR__) . '/',
             'types' => array(),
         );
 
