@@ -1,3 +1,8 @@
+<?php 
+if (!defined('ABSPATH')) {
+    exit('Cheatin huh?');
+}
+ ?>
 <script type="text/html" id="tmpl-menu-icons-item-field-preview-font">
     <i class="_icon {{'fa' == data.type ? '' : data.type}} {{ data.icon }}"></i>
 </script>
